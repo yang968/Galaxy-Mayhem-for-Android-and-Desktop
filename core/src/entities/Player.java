@@ -6,9 +6,12 @@ import com.badlogic.gdx.math.Circle;
 import com.badlogic.gdx.math.Vector2;
 import com.shy.spacehavoc.Assets;
 
+/**
+ * Class for setting up the player
+ */
 public class Player {
 	Vector2 position;
-	Circle pBounds;
+	Circle pBounds; // Player Hitbox
 	float velX = 0;
 	float velY = 0;
 	float W = Gdx.graphics.getWidth();
@@ -36,7 +39,11 @@ public class Player {
 			pBounds.set(position.x + 45, position.y + 45, 45);
 		}
 	}
-	
+
+	/**
+	 * Player's velocity gets updated on xy plane based on current device : Desktop, Android, iOS.
+	 * Desktop uses WASD keys for user input while Android/iOS uses Accelerometer.
+	 */
 	public void update(){
 		switch (Gdx.app.getType()) {
 		case Desktop:
@@ -97,7 +104,11 @@ public class Player {
 			break;
 		}
 	}
-	
+
+	/**
+	 * Player's position on the x&y plane gets updated. If player leaves the screen on one side, it will appear
+	 * on the opposite location. Player's hitbox gets updated based on resolution.
+	 */
 	public void movement(){
 		position.x = position.x + velX;
 		position.y = position.y + velY;
@@ -124,10 +135,18 @@ public class Player {
 		}
 	}
 
+	/**
+	 * Returns Player's position
+	 * @return Player's position
+	 */
 	public Vector2 getPosition() {
 		return position;
 	}
 
+	/**
+	 * Returns Player's hitbox area
+	 * @return Player's hitbox area
+	 */
 	public Circle getpBounds() {
 		return pBounds;
 	}
