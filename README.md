@@ -4,12 +4,16 @@ This is my first Java project using the LibGdx Framework. I created this project
 The code will be updated frequently with comments, refactored variables, and explanations of LibGdx elements.
 The original name for the game was Space Havoc and thus you will see some packages in com.shy.spacehavoc format
 
+If you want to see my implementations please go to:
+
+core/src
+
 If you wish to download and play the game, feel free to do so. 
 
 # Desktop
 You can play Desktop version by launching 'DesktopLauncher' class located in:
 
-gradle for android/desktop/src/com.shy.spacehavoc.desktop/
+desktop/src/com.shy.spacehavoc.desktop/
 
 Use Keyboards W,A,S,D to move around.
 
@@ -20,6 +24,6 @@ Minimum SDK version : 16 (Jelly Bean)
 
 You can play Android version by launching 'AndroidLauncher' class located in:
 
-gradle for android/android/src/com.shy.spacehavoc.android/
+android/src/com.shy.spacehavoc.android/
 
 Android version uses your device's Accelerometer as input. Please hold your phone flat before playing the game.
